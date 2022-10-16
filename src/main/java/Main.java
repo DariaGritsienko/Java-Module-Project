@@ -69,7 +69,11 @@ public class Main {
 
             if (scanner.hasNextDouble()) {
                 productPrice = scanner.nextDouble();
-                break;
+                if (productPrice > 0) {
+                    break;
+                } else {
+                    System.out.println("Введенная стоимость товара должна быть больше 0, попробуйте еще раз:");
+                }
             } else {
                 System.out.println("Введенная стоимость товара НЕ в формате: \"рубли,копейки\" [10,45], попробуйте еще раз:");
             }

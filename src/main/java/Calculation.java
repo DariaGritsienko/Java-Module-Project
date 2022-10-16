@@ -22,6 +22,11 @@ public class Calculation {
     }
 
     private static String declination(int rouble) {
+        int preLastDigit = rouble % 100 / 10;
+        if (preLastDigit == 1) {
+            return "рублей";
+        }
+
         switch (rouble % 10) {
             case 1:
                 return "рубль";
